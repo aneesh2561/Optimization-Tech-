@@ -1,0 +1,42 @@
+Step 1: Enter the provided data (coefficients of variables in objective function, coefficients of
+variables in constraints, right hand side elements of the constraints) in array’s (namely C, A, B).
+Step 2: Select the range of x1 in which graph to be plotted.
+Step 3: Find non-negative value of 𝑥2 from the ith constraint (say 𝑥2𝑖) in terms of 𝑥1
+Step 4: Plot the graph between 𝑥2𝑖 and 𝑥1
+Step 5: Assume an empty array (say, solution) matrix to store the obtained solution
+Step 6: Store the ith row of A in an array (say, A1)
+Step 7: Store the ith row of B in an array (say, B1)
+Step 7: Store the (i+1)th row of A in an array (say, A2)
+Step 8: Store the (i+1)th row of B in an array (say, B2)
+Step 9: Combine A1 and A2 (say, A3)
+Step 10: Combine B1 and B2 (say, B3)
+Step 11: Find solution of system of equations A3X=B3
+Step 12: Store solution in the considered empty array
+Step 13: Assume first column of solution as x1
+Step 14: Assume second column of solution as x2
+Step 15: Find such rows of solution which does not satisfy the first constraint
+Step 16: Delete such rows from Solution
+Step 17: Assume first column of solution as x1
+Step 18: Assume second column of solution as x2
+Step 19: Find such rows of solution which does not satisfy the first constraint
+Step 20: Repeat for all the constraints
+Step 21: Find value of objective function (say, OBJ) corresponding to ith row of solution
+Step 22: Find maximum or minimum value of objective function
+Step 23: Find that row corresponding to which OBJ is max or min
+Step 24: The row represents an optimal solution
+
+
+Consider the LPP:
+Max z = C^(t) X
+subject to AX = b, X ≥ 0
+Initially define Input paramenters:
+1. Number of constraints as m,
+2. Number of unknowns n,
+3. Entries bi of the R.H.S. vector b and entries aij of matrix A,
+4. Position of basic variables as pi where 1 ≤ i ≤ m .
+Step 1: Construct the basis matrix B from the already defined basic variables pi’s.
+Step 2: If det(B) != 0, then find XB = B^(−1) b, otherwise display (’ Not a Basic solution’) and
+STOP.
+Step 3: If XBi < 0 for some i then display (’ Not a B.F.S’) and STOP.
+If XBi = 0 for some i then display (’ Degenerate B.F.S’ ) and STOP.
+If XBi > 0 for all i then display (’ Non-degenerate B.F.S’ ) and STOP.
